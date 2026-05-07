@@ -16,9 +16,14 @@ BOOKS_FILE = os.path.join(os.path.dirname(__file__), "books.json")
 with open(BOOKS_FILE, "r", encoding="utf-8") as f:
     BOOKS = json.load(f)
 
-# Initialize OpenAI Client
-# Note: Ensure OPENAI_API_KEY is in your .env file
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialize OpenAI Client to use Hugging Face
+HUGGINGFACE_API_URL = "https://router.huggingface.co/v1"
+HF_MODEL = "openai/gpt-oss-20b:ovhcloud"
+
+client = OpenAI(
+    base_url=HUGGINGFACE_API_URL,
+    api_key=os.getenv("HF_TOKEN")
+)
 
 # In-memory session store: session_id -> list of clean messages (no tool calls)
 sessions: Dict[str, List[Dict[str, str]]] = {}
@@ -150,7 +155,7 @@ async def chat_endpoint(req: ChatRequest):
     
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini", # Using gpt-4o-mini for better function calling, can be changed to gpt-3.5-turbo or gpt-4o
+            model=HF_MODEL,
             messages=openai_messages,
             tools=functions,
             tool_choice="auto"
@@ -191,7 +196,7 @@ async def chat_endpoint(req: ChatRequest):
                 
             # Second call to get the final response
             second_response = client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=HF_MODEL,
                 messages=openai_messages
             )
             final_reply = second_response.choices[0].message.content
