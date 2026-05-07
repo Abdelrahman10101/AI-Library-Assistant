@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مساعد المكتبة الذكي</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        #chat-container { width: 100%; max-width: 500px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; height: 85vh; overflow: hidden; }
+        #header { background: #007bff; color: white; padding: 15px; text-align: center; font-size: 1.2em; font-weight: bold; }
+        #messages { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+        .message { padding: 12px 16px; border-radius: 15px; max-width: 80%; line-height: 1.5; font-size: 0.95em; word-wrap: break-word; white-space: pre-wrap; }
+        .user-msg { background-color: #007bff; color: white; align-self: flex-end; border-bottom-left-radius: 0; }
+        .bot-msg { background-color: #f1f0f0; color: #333; align-self: flex-start; border-bottom-right-radius: 0; }
+        #input-area { display: flex; padding: 15px; background: #fff; border-top: 1px solid #ddd; }
+        #input-area input { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 20px; outline: none; font-size: 1em; }
+        #input-area button { background-color: #007bff; color: white; border: none; padding: 10px 20px; margin-right: 10px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        #input-area button:hover { background-color: #0056b3; }
+        .typing { font-style: italic; color: #888; font-size: 0.9em; align-self: flex-start; margin-right: 10px; padding: 5px; display: none; }
+    </style>
+</head>
+<body>
+
+<div id="chat-container">
+    <div id="header">مساعد مكتبة الحي</div>
+    <div id="messages">
+        <div class="message bot-msg">مرحباً بك في مكتبة الحي! كيف يمكنني مساعدتك في العثور على الكتب اليوم؟</div>
+    </div>
+    <div id="typing-indicator" class="typing">المساعد يكتب...</div>
+    <div id="input-area">
+        <input type="text" id="user-input" placeholder="اكتب رسالتك هنا..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">إرسال</button>
+    </div>
+</div>
+
+<script>
+    const sessionId = "sess_" + Math.random().toString(36).substr(2, 9);
+    const messagesDiv = document.getElementById("messages");
+    const inputField = document.getElementById("user-input");
+    const typingIndicator = document.getElementById("typing-indicator");
+
+    async function sendMessage() {
+        const msg = inputField.value.trim();
+        if (!msg) return;
+
+        addMessage(msg, "user-msg");
+        inputField.value = "";
+        typingIndicator.style.display = "block";
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        try {
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ session_id: sessionId, message: msg })
+            });
+            const data = await response.json();
+            typingIndicator.style.display = "none";
+            addMessage(data.reply, "bot-msg");
+        } catch (e) {
+            typingIndicator.style.display = "none";
+            addMessage("عذراً، حدث خطأ في الاتصال بالخادم.", "bot-msg");
+        }
+    }
+
+    function addMessage(text, className) {
+        const div = document.createElement("div");
+        div.className = "message " + className;
+        div.textContent = text;
+        messagesDiv.appendChild(div);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function handleKeyPress(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            sendMessage();
+        }
+    }
+</script>
+
+</body>
+</html>

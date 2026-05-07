@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "title": "الحارس في حقل الشوفان",
+        "author": "ج. د. سالينجر",
+        "genre": "رواية",
+        "available": false,
+        "description": "رواية كلاسيكية عن المراهقة والتمرد"
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "author": "جورج أورويل",
+        "genre": "خيال علمي",
+        "available": true,
+        "description": "رواية ديستوبيا عن مجتمع شمولي"
+    },
+    {
+        "id": 3,
+        "title": "مزرعة الحيوان",
+        "author": "جورج أورويل",
+        "genre": "رواية",
+        "available": true,
+        "description": "خرافة سياسية ساخرة عن الثورة والفساد"
+    },
+    {
+        "id": 4,
+        "title": "الغريب",
+        "author": "ألبير كامو",
+        "genre": "رواية",
+        "available": true,
+        "description": "رواية وجودية عن اغتراب الإنسان"
+    },
+    {
+        "id": 5,
+        "title": "دوامة الزمن",
+        "author": "نورا",
+        "genre": "خيال",
+        "available": false,
+        "description": "قصة سفر عبر الزمن بأسلوب مشوق"
+    },
+    {
+        "id": 6,
+        "title": "عالم صوفي",
+        "author": "جوستاين غاردر",
+        "genre": "فلسفة",
+        "available": true,
+        "description": "رواية تاريخ الفلسفة"
+    },
+    {
+        "id": 7,
+        "title": "الأمير الصغير",
+        "author": "أنطوان دو سانت إكزوبيري",
+        "genre": "رواية",
+        "available": true,
+        "description": "رمزية عن الطفولة والصداقة"
+    },
+    {
+        "id": 8,
+        "title": "الخيميائي",
+        "author": "باولو كويلو",
+        "genre": "رواية",
+        "available": true,
+        "description": "رحلة راعي أغنام بحثاً عن كنز الشخصي"
+    },
+    {
+        "id": 9,
+        "title": "القلعة",
+        "author": "فرانز كافكا",
+        "genre": "رواية",
+        "available": false,
+        "description": "صراع الإنسان مع بيروقراطية غامضة"
+    },
+    {
+        "id": 10,
+        "title": "الجريمة والعقاب",
+        "author": "فيودور دوستويفسكي",
+        "genre": "رواية",
+        "available": true,
+        "description": "تحليل نفسي لجريمة قتل وتأنيب الضمير"
+    },
+    {
+        "id": 11,
+        "title": "البؤساء",
+        "author": "فيكتور هوغو",
+        "genre": "رواية",
+        "available": true,
+        "description": "ملحمة عن الفقر والعدالة في فرنسا القرن التاسع عشر"
+    },
+    {
+        "id": 12,
+        "title": "الحرب والسلام",
+        "author": "ليو تولستوي",
+        "genre": "رواية",
+        "available": false,
+        "description": "دراما المجتمع الروسي أثناء الحروب النابليونية"
+    },
+    {
+        "id": 13,
+        "title": "دون كيخوت",
+        "author": "ميغيل دي ثربانتس",
+        "genre": "رواية",
+        "available": true,
+        "description": "مغامرات فارس وهمي وخادمه في إسبانيا"
+    },
+    {
+        "id": 14,
+        "title": "كبرياء وتحامل",
+        "author": "جين أوستن",
+        "genre": "رواية",
+        "available": true,
+        "description": "قصة حب وطموح في الريف الإنجليزي"
+    },
+    {
+        "id": 15,
+        "title": "آلة الزمن",
+        "author": "هربرت جورج ويلز",
+        "genre": "خيال علمي",
+        "available": true,
+        "description": "رواية تناقش السفر عبر الزمن"
+    },
+    {
+        "id": 16,
+        "title": "فرانكشتاين",
+        "author": "ماري شيلي",
+        "genre": "خيال علمي",
+        "available": false,
+        "description": "قصة خلق كائن حي من أجزاء ميتة"
+    },
+    {
+        "id": 17,
+        "title": "فهرنهايت 451",
+        "author": "راي برادبري",
+        "genre": "خيال علمي",
+        "available": true,
+        "description": "مجتمع مستقبلي يحرق الكتب لمنع التفكير"
+    },
+    {
+        "id": 18,
+        "title": "ألعاب الجوع",
+        "author": "سوزان كولنز",
+        "genre": "خيال علمي",
+        "available": true,
+        "description": "منافسة قاتلة في عالم مستقبلي"
+    },
+    {
+        "id": 19,
+        "title": "الكثيب",
+        "author": "فرانك هربرت",
+        "genre": "خيال علمي",
+        "available": false,
+        "description": "صراع على كوكب صحراوي لإنتاج البهار"
+    },
+    {
+        "id": 20,
+        "title": "نادي القتال",
+        "author": "تشاك بولانيك",
+        "genre": "رواية",
+        "available": true,
+        "description": "هوس المستهلك والشخصية المزدوجة"
+    },
+    {
+        "id": 21,
+        "title": "شرق المتوسط",
+        "author": "عبد الرحمن منيف",
+        "genre": "رواية",
+        "available": true,
+        "description": "إنسان في سجون الشرق"
+    },
+    {
+        "id": 22,
+        "title": "ثلاثية غرناطة",
+        "author": "رضوى عاشور",
+        "genre": "رواية",
+        "available": false,
+        "description": "عائلة أندلسية بعد سقوط غرناطة"
+    },
+    {
+        "id": 23,
+        "title": "مدن الملح",
+        "author": "عبد الرحمن منيف",
+        "genre": "رواية",
+        "available": true,
+        "description": "مجتمع بعد اكتشاف النفط"
+    },
+    {
+        "id": 24,
+        "title": "ساق البامبو",
+        "author": "سعود السنعوسي",
+        "genre": "رواية",
+        "available": true,
+        "description": "الهوية لابن خادمة فلبينية وكويتي"
+    },
+    {
+        "id": 25,
+        "title": "عزازيل",
+        "author": "يوسف زيدان",
+        "genre": "رواية",
+        "available": false,
+        "description": "ديني وفلسفي في القرن الخامس"
+    },
+    {
+        "id": 26,
+        "title": "ذاكرة الجسد",
+        "author": "أحلام مستغانمي",
+        "genre": "رواية",
+        "available": true,
+        "description": "حب وثورة جزائرية"
+    },
+    {
+        "id": 27,
+        "title": "قواعد العشق الأربعون",
+        "author": "إليف شافاق",
+        "genre": "رواية",
+        "available": true,
+        "description": "الحب بين جلال الدين الرومي وشمس التبريزي"
+    },
+    {
+        "id": 28,
+        "title": "قتل طائر محاكي",
+        "author": "هاربر لي",
+        "genre": "رواية",
+        "available": true,
+        "description": "العنصرية في أمريكا بعيون طفلة"
+    },
+    {
+        "id": 29,
+        "title": "مئة عام من العزلة",
+        "author": "غابرييل غارسيا ماركيز",
+        "genre": "رواية",
+        "available": false,
+        "description": "ملحمة عائلة بوينديا في قرية معزولة"
+    },
+    {
+        "id": 30,
+        "title": "اسم الوردة",
+        "author": "أومبرتو إيكو",
+        "genre": "رواية",
+        "available": true,
+        "description": "جريمة غامضة في دير بالقرون الوسطى"
+    },
+    {
+        "id": 31,
+        "title": "الرجل الذي حسب زوجته قبعة",
+        "author": "أوليفر ساكس",
+        "genre": "علم نفس",
+        "available": true,
+        "description": "قصص حقيقية لاضطرابات عصبية غريبة"
+    },
+    {
+        "id": 32,
+        "title": "العقل الباطن",
+        "author": "سيغموند فرويد",
+        "genre": "علم نفس",
+        "available": false,
+        "description": "نظرية التحليل النفسي"
+    },
+    {
+        "id": 33,
+        "title": "سيكولوجية الجماهير",
+        "author": "غوستاف لوبون",
+        "genre": "علم نفس",
+        "available": true,
+        "description": "سلوك الجماهير وتأثيرها"
+    },
+    {
+        "id": 34,
+        "title": "التفكير السريع والبطيء",
+        "author": "دانيال كانمان",
+        "genre": "علم نفس",
+        "available": true,
+        "description": "كيف يتخذ العقل قراراته"
+    },
+    {
+        "id": 35,
+        "title": "المنطق",
+        "author": "أرسطو",
+        "genre": "فلسفة",
+        "available": false,
+        "description": "أساس المنطق الصوري"
+    },
+    {
+        "id": 36,
+        "title": "الجمهورية",
+        "author": "أفلاطون",
+        "genre": "فلسفة",
+        "available": true,
+        "description": "حوار عن العدالة والمدينة الفاضلة"
+    },
+    {
+        "id": 37,
+        "title": "تأملات في الفلسفة الأولى",
+        "author": "رينيه ديكارت",
+        "genre": "فلسفة",
+        "available": true,
+        "description": "يطرح الشك المنهجي"
+    },
+    {
+        "id": 38,
+        "title": "نقد العقل الخالص",
+        "author": "إيمانويل كانط",
+        "genre": "فلسفة",
+        "available": false,
+        "description": "المعرفة الإنسانية"
+    },
+    {
+        "id": 39,
+        "title": "هكذا تكلم زرادشت",
+        "author": "فريدريك نيتشه",
+        "genre": "فلسفة",
+        "available": true,
+        "description": "موت الإله والإنسان الأعلى"
+    },
+    {
+        "id": 40,
+        "title": "العقد الاجتماعي",
+        "author": "جان جاك روسو",
+        "genre": "فلسفة",
+        "available": true,
+        "description": "السيادة الشعبية وأصل التفاوت"
+    },
+    {
+        "id": 41,
+        "title": "ثروة الأمم",
+        "author": "آدم سميث",
+        "genre": "اقتصاد",
+        "available": true,
+        "description": "أساس الاقتصاد الكلاسيكي"
+    },
+    {
+        "id": 42,
+        "title": "رأس المال",
+        "author": "كارل ماركس",
+        "genre": "اقتصاد",
+        "available": false,
+        "description": "نقد الاقتصاد السياسي"
+    },
+    {
+        "id": 43,
+        "title": "الاقتصاد العجيب",
+        "author": "ستيفن ليفيت",
+        "genre": "اقتصاد",
+        "available": true,
+        "description": "تحليل غير تقليدي لظواهر اليومية"
+    },
+    {
+        "id": 44,
+        "title": "التاريخ",
+        "author": "هيرودوت",
+        "genre": "تاريخ",
+        "available": true,
+        "description": "أول كتاب تاريخ يوثق الحروب الفارسية"
+    },
+    {
+        "id": 45,
+        "title": "الخلفاء",
+        "author": "السيوطي",
+        "genre": "تاريخ",
+        "available": false,
+        "description": "سير الخلفاء الراشدين والأمويين والعباسيين"
+    },
+    {
+        "id": 46,
+        "title": "المقدمة",
+        "author": "ابن خلدون",
+        "genre": "تاريخ",
+        "available": true,
+        "description": "فلسفة التاريخ والعمران"
+    },
+    {
+        "id": 47,
+        "title": "غاتسبي العظيم",
+        "author": "فرانسيس سكوت فيتزجيرالد",
+        "genre": "رواية",
+        "available": true,
+        "description": "حلم الأمريكي في العشرينات"
+    },
+    {
+        "id": 48,
+        "title": "مائة من عظماء أمة الإسلام",
+        "author": "جهاد الترباني",
+        "genre": "تاريخ",
+        "available": true,
+        "description": "مائة شخصية غيرت التاريخ"
+    },
+    {
+        "id": 49,
+        "title": "لأنك الله",
+        "author": "علي بن جابر الفيفي",
+        "genre": "دين",
+        "available": true,
+        "description": "رحلة إلى أسماء الله الحسنى"
+    },
+    {
+        "id": 50,
+        "title": "جدد حياتك",
+        "author": "محمد الغزالي",
+        "genre": "دين",
+        "available": true,
+        "description": "تجديد الفكر الإسلامي بأسلوب معاصر"
+    }
+]
