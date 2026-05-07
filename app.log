@@ -1,0 +1,12 @@
+2026-05-08 02:16:19,714 - INFO - Session sess_qgxih9syu sent a message: 'عندك كتاب الأمير الصغير'
+2026-05-08 02:16:21,910 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 02:16:21,920 - INFO - Executing tool: search_books with args {'query': 'الأمير الصغير'}
+2026-05-08 02:16:22,982 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 02:16:47,378 - INFO - Session sess_qgxih9syu sent a message: 'شكرا'
+2026-05-08 02:16:48,763 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 02:20:13,098 - INFO - Session sess_nmhf1nxju sent a message: 'اهلا'
+2026-05-08 02:20:16,947 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 02:20:51,947 - INFO - Session sess_nmhf1nxju sent a message: 'يا هلا'
+2026-05-08 02:20:52,940 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 02:23:57,526 - INFO - Session sess_f3zvr1jfc sent a message: 'اهلا'
+2026-05-08 02:23:59,764 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
