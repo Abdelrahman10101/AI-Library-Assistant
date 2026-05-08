@@ -10,3 +10,92 @@
 2026-05-08 02:20:52,940 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
 2026-05-08 02:23:57,526 - INFO - Session sess_f3zvr1jfc sent a message: 'اهلا'
 2026-05-08 02:23:59,764 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:33:58,545 - INFO - Session sess_f3zvr1jfc sent a message: 'عاوز كتاب عن الاقتصاد'
+2026-05-08 03:34:00,579 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:34:00,590 - INFO - Executing tool: search_books with args {'genre': 'اقتصاد'}
+2026-05-08 03:34:03,490 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:34:28,737 - INFO - Session sess_f3zvr1jfc sent a message: 'اشرحلي الكتاب'
+2026-05-08 03:34:31,515 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:34:31,521 - INFO - Executing tool: search_books with args {'query': 'ثروة الأمم'}
+2026-05-08 03:34:35,751 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:35:03,289 - INFO - Session sess_f3zvr1jfc sent a message: 'عاوز كتاب اسلامي'
+2026-05-08 03:35:05,729 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:35:05,732 - INFO - Executing tool: search_books with args {'genre': 'Islam', 'query': ''}
+2026-05-08 03:35:06,931 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:36:52,264 - INFO - Session sess_f3zvr1jfc sent a message: 'عاوز كتاب اكشن'
+2026-05-08 03:36:57,424 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:36:57,426 - INFO - Executing tool: search_books with args {'genre': 'Islamic'}
+2026-05-08 03:37:00,243 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:37:27,594 - INFO - Session sess_77s6jk7nk sent a message: 'عاوز كتاب اكشن'
+2026-05-08 03:37:29,435 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:37:29,439 - INFO - Executing tool: search_books with args {'genre': 'اكشن'}
+2026-05-08 03:37:30,726 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:38:58,531 - INFO - Session sess_77s6jk7nk sent a message: 'اوك'
+2026-05-08 03:39:00,333 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:39:00,335 - INFO - Executing tool: search_books with args {'genre': 'action'}
+2026-05-08 03:39:05,176 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:41:23,944 - INFO - Session sess_10hjkpw3v sent a message: 'عاوز كتاب اكشن'
+2026-05-08 03:41:25,587 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:41:25,587 - INFO - Executing tool: search_books with args {'genre': 'action'}
+2026-05-08 03:41:27,829 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:42:21,462 - INFO - Session sess_10hjkpw3v sent a message: 'عاوز كتاب اكشن'
+2026-05-08 03:42:24,286 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 03:42:24,290 - INFO - Executing tool: search_books with args {'genre': 'Action'}
+2026-05-08 03:42:27,957 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:13:16,964 - INFO - Session sess_wryhgi75h sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:13:19,265 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:13:19,269 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:13:20,615 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-08 04:13:20,621 - ERROR - Error processing chat request: Error code: 400 - {'message': 'unexpected tokens remaining in message header: Some("to=functions.search_books")'}
+2026-05-08 04:20:57,531 - INFO - Session sess_fwxkkmxs5 sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:20:59,694 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:20:59,698 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:21:01,653 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:21:18,756 - INFO - Session sess_fwxkkmxs5 sent a message: 'hi'
+2026-05-08 04:21:20,405 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:21:20,412 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:21:22,147 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:23:07,964 - INFO - Session sess_fwxkkmxs5 sent a message: 'hi'
+2026-05-08 04:23:09,350 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:23:16,563 - INFO - Session sess_fwxkkmxs5 sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:23:17,747 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:23:17,747 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:23:19,347 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:29:49,497 - INFO - Session sess_fwxkkmxs5 sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:29:51,040 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:29:51,045 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:29:52,306 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:32:35,131 - INFO - Session sess_qh61ioibn sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:32:37,312 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:32:37,315 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:32:38,845 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:41:20,242 - INFO - Session sess_dn6y1lk50 sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:41:22,055 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:41:22,064 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:41:23,416 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:41:23,431 - ERROR - Frontend Error for session sess_dn6y1lk50: Error: marked(): input parameter is undefined or null
+Please report this to https://github.com/markedjs/marked.
+2026-05-08 04:43:37,541 - INFO - Session sess_dn6y1lk50 sent a message: 'متاح ولا لأ؟'
+2026-05-08 04:43:39,173 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:43:39,176 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:43:40,916 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:43:40,923 - ERROR - Frontend Error for session sess_dn6y1lk50: Error: marked(): input parameter is undefined or null
+Please report this to https://github.com/markedjs/marked.
+2026-05-08 04:43:59,728 - INFO - Session sess_dn6y1lk50 sent a message: 'طب كتاب ذاكرة الجسد؟'
+2026-05-08 04:44:01,460 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:44:01,461 - INFO - Executing tool: search_books with args {'genre': '', 'query': 'ذاكرة الجسد'}
+2026-05-08 04:44:02,798 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:57:39,194 - INFO - Session sess_xse40vya2 sent a message: 'كتاب رأس المال متاح؟'
+2026-05-08 04:57:41,072 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:57:41,081 - INFO - Executing tool: search_books with args {'query': 'رأس المال'}
+2026-05-08 04:57:43,653 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:57:44,860 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:57:44,864 - INFO - Executing tool: search_books with args {'genre': 'اقتصاد'}
+2026-05-08 04:57:48,092 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:58:34,889 - INFO - Session sess_xse40vya2 sent a message: 'اعجبني كتاب ثروة الامم'
+2026-05-08 04:58:38,948 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:58:38,948 - INFO - Executing tool: search_books with args {'genre': 'اقتصاد', 'query': 'ثروة الأمم'}
+2026-05-08 04:58:40,581 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 04:58:40,583 - INFO - Executing tool: log_feedback with args {'book_id': 41, 'note': 'أعجبني الكتاب', 'sentiment': 'positive'}
+2026-05-08 04:58:40,586 - INFO - Feedback logged and saved to CSV for book_id 41: positive
+2026-05-08 04:58:41,618 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
