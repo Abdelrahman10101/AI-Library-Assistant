@@ -99,3 +99,25 @@ Please report this to https://github.com/markedjs/marked.
 2026-05-08 04:58:40,583 - INFO - Executing tool: log_feedback with args {'book_id': 41, 'note': 'أعجبني الكتاب', 'sentiment': 'positive'}
 2026-05-08 04:58:40,586 - INFO - Feedback logged and saved to CSV for book_id 41: positive
 2026-05-08 04:58:41,618 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:13,539 - INFO - Session sess_xse40vya2 sent a message: 'اقترح كتاب اكشن'
+2026-05-08 05:17:20,212 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:20,290 - INFO - Executing tool: search_books with args {'genre': '', 'query': 'Action'}
+2026-05-08 05:17:25,560 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:28,518 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:32,595 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:35,410 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:38,614 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:17:38,615 - INFO - Executing tool: search_books with args {'query': 'Action'}
+2026-05-08 05:17:41,264 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:19:24,739 - INFO - Session sess_xd3gyz3l9 sent a message: 'عندك كتاب ذاكره الحسد'
+2026-05-08 05:19:27,387 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:19:27,389 - INFO - Executing tool: search_books with args {'query': 'ذاكرة الحسد'}
+2026-05-08 05:19:31,887 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:19:38,976 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:20:13,252 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:21:32,685 - INFO - Session sess_xd3gyz3l9 sent a message: 'اوك كتاب ذكريات الطفولة متاح'
+2026-05-08 05:21:34,447 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:21:34,453 - INFO - Executing tool: search_books with args {'genre': 'رواية', 'query': 'ذكريات الطفولة'}
+2026-05-08 05:21:36,353 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:21:36,401 - INFO - Executing tool: search_books with args {'genre': 'رواية'}
+2026-05-08 05:21:41,453 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
