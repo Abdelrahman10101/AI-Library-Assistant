@@ -2,6 +2,7 @@ import json
 import os
 import csv
 import logging
+import difflib
 from datetime import datetime
 from typing import List, Dict, Any
 from fastapi import FastAPI, Request
@@ -63,37 +64,80 @@ SYSTEM_PROMPT = f"""أنت مساعد ذكي لمكتبة حي صغيرة.
 """
 
 def search_books(query: str = "", genre: str = "") -> str:
-    """البحث عن الكتب في المكتبة حسب الاسم أو الفئة."""
-    results = []
-    for book in BOOKS:
-        match_query = True
-        if query:
-            q = query.lower()
-            match_query = q in book["title"].lower() or q in book["author"].lower()
-            
-        match_genre = True
-        if genre:
-            g = genre.lower()
-            match_genre = g in book["genre"].lower()
-            
-        if match_query and match_genre:
-            results.append(book)
-            
-    # Limit results to 5 to avoid sending the whole database and reduce tokens
-    results = results[:5]
-    
-    # Return limited fields
-    limited_results = [
-        {
+    """البحث عن الكتب في المكتبة حسب الاسم أو الفئة مع دعم البحث التقريبي وحل مشكلة التعارض."""
+    def format_book(b):
+        return {
             "id": b["id"],
             "title": b["title"],
             "author": b["author"],
             "genre": b["genre"],
             "available": b["available"],
             "description": b["description"]
-        } for b in results
-    ]
-    return json.dumps(limited_results, ensure_ascii=False)
+        }
+
+    if not query:
+        # If only genre is provided
+        results = []
+        if genre:
+            g = genre.lower()
+            results = [b for b in BOOKS if g in b["genre"].lower()][:5]
+        return json.dumps([format_book(b) for b in results], ensure_ascii=False)
+        
+    q = query.lower()
+    scored_books = []
+    
+    for book in BOOKS:
+        title_score = difflib.SequenceMatcher(None, q, book["title"].lower()).ratio()
+        author_score = difflib.SequenceMatcher(None, q, book["author"].lower()).ratio()
+        desc_score = difflib.SequenceMatcher(None, q, book.get("description", "").lower()).ratio()
+        
+        # Substring match gives a perfect score to guarantee it's selected
+        if q in book["title"].lower():
+            title_score = 1.0
+        if q in book["author"].lower():
+            author_score = 1.0
+        if q in book.get("description", "").lower():
+            desc_score = 1.0
+            
+        best_score = max(title_score, author_score, desc_score)
+        
+        matches_genre = True
+        if genre:
+            g = genre.lower()
+            matches_genre = g in book["genre"].lower()
+            
+        scored_books.append({
+            "book": book,
+            "score": best_score,
+            "matches_genre": matches_genre
+        })
+        
+    scored_books.sort(key=lambda x: x["score"], reverse=True)
+    top_matches = [sb for sb in scored_books if sb["score"] > 0.2]
+    
+    # 1. Check for perfect matches (Good score + matches genre)
+    perfect_matches = [sb["book"] for sb in top_matches if sb["matches_genre"] and sb["score"] > 0.6]
+    if perfect_matches:
+        results = [format_book(b) for b in perfect_matches[:5]]
+        return json.dumps({"status": "success", "results": results}, ensure_ascii=False)
+        
+    # 2. Check for fuzzy/mismatched matches
+    if top_matches:
+        results = [format_book(sb["book"]) for sb in top_matches[:5]]
+        warning = ""
+        if genre:
+            warning = "لم يتم العثور على كتاب يطابق العنوان والفئة معاً. هذه أقرب النتائج للعنوان فقط. يرجى إخبار المستخدم أن الفئة قد تكون مختلفة عما طلبه."
+        else:
+            warning = "لم يتم العثور على تطابق دقيق للعنوان. هذه أقرب الأسماء المشابهة (قد يكون هناك خطأ إملائي من المستخدم). اسأل المستخدم إذا كان يقصد أحدها."
+            
+        return json.dumps({
+            "status": "fuzzy_match",
+            "warning": warning,
+            "results": results
+        }, ensure_ascii=False)
+        
+    # 3. Nothing found
+    return json.dumps({"status": "not_found", "results": []}, ensure_ascii=False)
 
 def log_feedback(book_id: int, sentiment: str, note: str) -> str:
     """حفظ تقييم الزائر لكتاب معين ووضع البيانات في ملف CSV."""

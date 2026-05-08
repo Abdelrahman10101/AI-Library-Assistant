@@ -121,3 +121,71 @@ Please report this to https://github.com/markedjs/marked.
 2026-05-08 05:21:36,353 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
 2026-05-08 05:21:36,401 - INFO - Executing tool: search_books with args {'genre': 'رواية'}
 2026-05-08 05:21:41,453 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:34:27,337 - INFO - Session sess_1n30w5caz sent a message: 'uk]; ;jf glcgtm k,vh'
+2026-05-08 05:34:29,384 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:34:36,490 - INFO - Session sess_1n30w5caz sent a message: 'عندك كتب لمؤلفة نورا'
+2026-05-08 05:34:38,516 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:34:38,522 - INFO - Executing tool: search_books with args {'query': 'نورا'}
+2026-05-08 05:34:40,450 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:34:40,455 - INFO - Executing tool: search_books with args {'genre': 'خيال'}
+2026-05-08 05:34:44,664 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:44:54,582 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتب لمؤلفة نورا'
+2026-05-08 05:44:56,574 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:44:56,579 - INFO - Executing tool: search_books with args {'query': 'نورا'}
+2026-05-08 05:44:58,858 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:44:58,860 - INFO - Executing tool: search_books with args {'genre': 'خيال'}
+2026-05-08 05:45:03,014 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:45:37,432 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتاب مزرعه الحيوان'
+2026-05-08 05:45:39,193 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:45:39,196 - INFO - Executing tool: search_books with args {'query': 'مزرعة الحيوان'}
+2026-05-08 05:45:40,931 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:48:41,928 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتاب ذاكره الحسد'
+2026-05-08 05:48:43,315 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:48:43,315 - INFO - Executing tool: search_books with args {'query': 'ذاكرة الحسد'}
+2026-05-08 05:48:45,837 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:49:16,121 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتاب قواعد العش الخمسون'
+2026-05-08 05:49:18,085 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:49:18,090 - INFO - Executing tool: search_books with args {'genre': 'رواية', 'query': 'قواعد العش الخمسون'}
+2026-05-08 05:49:23,447 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:49:54,147 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتاب بيتكلم عن المراهقة'
+2026-05-08 05:50:07,171 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:50:07,180 - INFO - Executing tool: search_books with args {'genre': 'مراهقة', 'query': 'مراهقة'}
+2026-05-08 05:50:20,890 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:51:20,087 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتاب بيتكلم عن الفساد'
+2026-05-08 05:51:23,430 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:51:23,435 - INFO - Executing tool: search_books with args {'query': 'فساد'}
+2026-05-08 05:51:27,038 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:53:10,444 - INFO - Session sess_u7bvt7phm sent a message: 'عندك كتاب عن امريكا'
+2026-05-08 05:53:12,378 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:53:12,382 - INFO - Executing tool: search_books with args {'genre': None, 'query': 'امريكا'}
+2026-05-08 05:53:16,432 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:54:10,184 - INFO - Session sess_u7bvt7phm sent a message: 'عن الحلم الامريكي'
+2026-05-08 05:54:12,187 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 05:54:12,187 - INFO - Executing tool: search_books with args {'query': 'الحلم الامريكي'}
+2026-05-08 05:54:17,725 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 06:00:11,923 - INFO - Session sess_juetswuw8 sent a message: 'عند كتاب عن امريكا'
+2026-05-08 06:00:13,991 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-08 06:00:13,994 - ERROR - Error processing chat request: Error code: 400 - {'message': 'unexpected tokens remaining in message header: Some("to=functions.search_books")'}
+Traceback (most recent call last):
+  File "D:\Abdo\Task\Howeyah\Library Assistant\app.py", line 247, in chat_endpoint
+    response = client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\openai\_utils\_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\openai\resources\chat\completions.py", line 598, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\openai\_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\openai\_base_client.py", line 834, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\openai\_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'message': 'unexpected tokens remaining in message header: Some("to=functions.search_books")'}
+2026-05-08 06:01:28,344 - INFO - Session sess_juetswuw8 sent a message: 'عندك كتاب عن امريكا'
+2026-05-08 06:01:30,264 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 06:01:30,264 - INFO - Executing tool: search_books with args {'query': 'أمريكا'}
+2026-05-08 06:01:33,687 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
