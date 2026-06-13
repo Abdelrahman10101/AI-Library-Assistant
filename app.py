@@ -8,14 +8,15 @@ from typing import List, Dict, Any
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 
-log_file_path = os.path.join(os.path.dirname(__file__), "app.log")
+log_handlers = [logging.StreamHandler()]
+if not os.getenv("VERCEL"):
+    log_file_path = os.path.join(os.path.dirname(__file__), "app.log")
+    log_handlers.append(logging.FileHandler(log_file_path, encoding="utf-8"))
+
 logging.basicConfig(
     level=logging.INFO, 
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(log_file_path, encoding="utf-8"),
-        logging.StreamHandler()
-    ]
+    handlers=log_handlers
 )
 logger = logging.getLogger(__name__)
 from pydantic import BaseModel
@@ -159,17 +160,20 @@ def log_feedback(book_id: int, sentiment: str, note: str) -> str:
     }
     feedback_store.append(feedback_entry)
     
-    csv_file = os.path.join(os.path.dirname(__file__), "feedback.csv")
-    file_exists = os.path.isfile(csv_file)
-    try:
-        with open(csv_file, mode="a", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=["date", "book_id", "title", "author", "sentiment", "note"])
-            if not file_exists:
-                writer.writeheader()
-            writer.writerow(feedback_entry)
-        logger.info(f"Feedback logged and saved to CSV for book_id {book_id}: {sentiment}")
-    except Exception as e:
-        logger.error(f"Failed to save feedback to CSV: {str(e)}")
+    if not os.getenv("VERCEL"):
+        csv_file = os.path.join(os.path.dirname(__file__), "feedback.csv")
+        file_exists = os.path.isfile(csv_file)
+        try:
+            with open(csv_file, mode="a", encoding="utf-8", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=["date", "book_id", "title", "author", "sentiment", "note"])
+                if not file_exists:
+                    writer.writeheader()
+                writer.writerow(feedback_entry)
+            logger.info(f"Feedback logged and saved to CSV for book_id {book_id}: {sentiment}")
+        except Exception as e:
+            logger.error(f"Failed to save feedback to CSV: {str(e)}")
+    else:
+        logger.info(f"Feedback logged in memory for book_id {book_id}: {sentiment} (CSV save disabled on Vercel)")
         
     return json.dumps({"status": "success", "message": "تم حفظ التقييم بنجاح."})
 
